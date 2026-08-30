@@ -1,0 +1,2284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Personal Website & Branding | Ozama Farook
+    </title>
+
+    <meta
+        name="description"
+        content="Personal website and branding project by Ozama Farook featuring responsive web design, professional portfolio presentation, social integration and digital identity."
+    >
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- MAIN WEBSITE CSS -->
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+
+    <!-- PROJECT PAGE CSS -->
+    <style>
+
+        body {
+            background: #070b12;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        .project-header {
+            width: 100%;
+            min-height: 80px;
+
+            padding: 0 clamp(24px, 6vw, 110px);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 25px;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(7, 11, 18, 0.97);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+
+        .project-logo {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            font-weight: 700;
+        }
+
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 11px 17px;
+
+            border-radius: 10px;
+
+            border: 1px solid rgba(58,160,255,0.35);
+
+            color: #dcecff;
+
+            font-size: 14px;
+
+            transition: 0.25s ease;
+        }
+
+
+        .back-btn:hover {
+            background: rgba(22,139,255,0.10);
+
+            border-color: #3aa0ff;
+        }
+
+
+
+        /* ================= HERO ================= */
+
+        .project-hero {
+            width: 100%;
+            max-width: 1600px;
+
+            margin: 0 auto;
+
+            padding:
+                110px
+                clamp(24px, 6vw, 110px)
+                90px;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.05fr)
+                minmax(350px, 0.95fr);
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .project-label {
+            color: #3aa0ff;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .project-hero h1 {
+            font-size: clamp(52px, 6vw, 88px);
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 26px;
+        }
+
+
+        .project-hero h1 span {
+            display: block;
+
+            color: #3aa0ff;
+        }
+
+
+        .project-intro {
+            max-width: 760px;
+
+            color: #96a4b6;
+
+            font-size: 17px;
+
+            line-height: 1.85;
+
+            margin-bottom: 32px;
+        }
+
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 11px;
+        }
+
+
+        .project-meta span {
+            padding: 9px 14px;
+
+            border-radius: 999px;
+
+            background: rgba(22,139,255,0.08);
+
+            border: 1px solid rgba(58,160,255,0.18);
+
+            color: #b9d9ff;
+
+            font-size: 13px;
+        }
+
+
+
+        /* ================= WEBSITE MOCKUP ================= */
+
+        .website-visual {
+            min-height: 460px;
+
+            padding: 24px;
+
+            border-radius: 26px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(22,139,255,0.08),
+                    rgba(255,255,255,0.012)
+                );
+
+            border: 1px solid rgba(58,160,255,0.20);
+
+            box-shadow:
+                0 30px 70px rgba(0,0,0,0.32);
+        }
+
+
+        .browser-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 18px;
+        }
+
+
+        .browser-dots {
+            display: flex;
+
+            gap: 7px;
+        }
+
+
+        .browser-dot {
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.22);
+        }
+
+
+        .browser-url {
+            color: #75869b;
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+        }
+
+
+        .website-preview {
+            min-height: 370px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 28px;
+
+            border-radius: 18px;
+
+            background:
+                radial-gradient(
+                    circle at 75% 35%,
+                    rgba(22,139,255,0.11),
+                    transparent 30%
+                ),
+                #090f18;
+
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+
+        .preview-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 50px;
+        }
+
+
+        .preview-logo {
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 10px;
+
+            background: linear-gradient(
+                135deg,
+                #168bff,
+                #0067df
+            );
+
+            font-weight: 700;
+        }
+
+
+        .preview-menu {
+            display: flex;
+
+            gap: 14px;
+        }
+
+
+        .preview-menu span {
+            width: 35px;
+            height: 4px;
+
+            border-radius: 999px;
+
+            background: rgba(255,255,255,0.16);
+        }
+
+
+        .preview-content {
+            max-width: 72%;
+        }
+
+
+        .preview-small {
+            color: #3aa0ff;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .preview-name {
+            font-size: 34px;
+
+            font-weight: 700;
+
+            line-height: 1;
+
+            margin-bottom: 12px;
+        }
+
+
+        .preview-name span {
+            display: block;
+
+            color: #3aa0ff;
+        }
+
+
+        .preview-role {
+            color: #e8edf5;
+
+            font-size: 13px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .preview-line {
+            width: 85%;
+            height: 5px;
+
+            margin-bottom: 7px;
+
+            border-radius: 999px;
+
+            background: rgba(255,255,255,0.08);
+        }
+
+
+        .preview-line.short {
+            width: 62%;
+        }
+
+
+        .preview-buttons {
+            display: flex;
+
+            gap: 9px;
+
+            margin-top: 20px;
+        }
+
+
+        .preview-button {
+            width: 85px;
+            height: 27px;
+
+            border-radius: 7px;
+
+            background: rgba(22,139,255,0.18);
+
+            border: 1px solid rgba(58,160,255,0.25);
+        }
+
+
+        .preview-button.secondary {
+            background: rgba(255,255,255,0.025);
+
+            border-color: rgba(255,255,255,0.09);
+        }
+
+
+        .preview-person {
+            position: absolute;
+
+            width: 125px;
+            height: 220px;
+
+            right: 25px;
+            bottom: 0;
+
+            border-radius: 60px 60px 8px 8px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(58,160,255,0.12),
+                    rgba(0,0,0,0.55)
+                );
+
+            border: 1px solid rgba(58,160,255,0.18);
+        }
+
+
+
+        /* ================= GENERAL SECTIONS ================= */
+
+        .project-section {
+            width: 100%;
+            max-width: 1600px;
+
+            margin: 0 auto;
+
+            padding:
+                90px
+                clamp(24px, 6vw, 110px);
+
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+
+        .project-section-heading {
+            max-width: 830px;
+
+            margin-bottom: 45px;
+        }
+
+
+        .project-section-heading > p {
+            color: #3aa0ff;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .project-section-heading h2 {
+            font-size: clamp(36px, 4vw, 58px);
+
+            line-height: 1.1;
+
+            letter-spacing: -2px;
+        }
+
+
+        .project-description {
+            margin-top: 18px;
+
+            color: #8f9baa;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+
+        /* ================= OBJECTIVES ================= */
+
+        .objective-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        .objective-card {
+            min-height: 235px;
+
+            padding: 28px;
+
+            border-radius: 18px;
+
+            background: #0d131d;
+
+            border: 1px solid rgba(255,255,255,0.07);
+
+            transition: 0.3s ease;
+        }
+
+
+        .objective-card:hover {
+            transform: translateY(-5px);
+
+            border-color: rgba(58,160,255,0.34);
+        }
+
+
+        .objective-icon {
+            width: 52px;
+            height: 52px;
+
+            display: grid;
+            place-items: center;
+
+            margin-bottom: 22px;
+
+            border-radius: 14px;
+
+            background: rgba(22,139,255,0.10);
+
+            border: 1px solid rgba(58,160,255,0.18);
+
+            color: #3aa0ff;
+
+            font-size: 20px;
+        }
+
+
+        .objective-card h3 {
+            font-size: 19px;
+
+            margin-bottom: 11px;
+        }
+
+
+        .objective-card p {
+            color: #8f9baa;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* ================= DESIGN SYSTEM ================= */
+
+        .design-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        .design-card {
+            min-height: 210px;
+
+            padding: 28px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(22,139,255,0.055),
+                    rgba(255,255,255,0.012)
+                );
+
+            border: 1px solid rgba(58,160,255,0.13);
+        }
+
+
+        .design-card i {
+            color: #3aa0ff;
+
+            font-size: 27px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .design-card h3 {
+            font-size: 19px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .design-card p {
+            color: #8795a7;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* ================= RESPONSIVE BREAKPOINTS ================= */
+
+        .responsive-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        .device-card {
+            min-height: 240px;
+
+            padding: 28px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            background: #0d131d;
+
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+
+        .device-icon {
+            height: 92px;
+
+            display: grid;
+            place-items: center;
+
+            margin-bottom: 18px;
+        }
+
+
+        .device-icon i {
+            color: #3aa0ff;
+
+            font-size: 54px;
+        }
+
+
+        .device-card h3 {
+            font-size: 18px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .device-card p {
+            color: #7f8ea1;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+
+
+        /* ================= FEATURES ================= */
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        .feature-card {
+            padding: 26px;
+
+            border-radius: 18px;
+
+            background: #0d131d;
+
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+
+        .feature-number {
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            margin-bottom: 18px;
+
+            border-radius: 10px;
+
+            background: rgba(22,139,255,0.10);
+
+            color: #3aa0ff;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        .feature-card h3 {
+            font-size: 18px;
+
+            margin-bottom: 9px;
+        }
+
+
+        .feature-card p {
+            color: #8493a5;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* ================= SOCIAL BRAND ================= */
+
+        .social-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 16px;
+        }
+
+
+        .social-card {
+            padding: 28px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 16px;
+
+            border-radius: 18px;
+
+            background: #0d131d;
+
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+
+        .social-card i {
+            width: 48px;
+            height: 48px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 13px;
+
+            background: rgba(22,139,255,0.10);
+
+            color: #3aa0ff;
+
+            font-size: 20px;
+        }
+
+
+        .social-card span {
+            display: block;
+
+            color: #7f8ea0;
+
+            font-size: 11px;
+
+            margin-bottom: 4px;
+        }
+
+
+        .social-card strong {
+            font-size: 15px;
+        }
+
+
+
+        /* ================= DEVELOPMENT STACK ================= */
+
+        .tech-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, minmax(0, 1fr));
+
+            gap: 16px;
+        }
+
+
+        .tech-card {
+            padding: 26px;
+
+            text-align: center;
+
+            border-radius: 17px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(22,139,255,0.05),
+                    rgba(255,255,255,0.012)
+                );
+
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+
+        .tech-card i {
+            display: block;
+
+            color: #3aa0ff;
+
+            font-size: 28px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .tech-card strong {
+            font-size: 15px;
+        }
+
+
+
+        /* ================= DEVELOPMENT PROCESS ================= */
+
+        .process {
+            display: grid;
+
+            grid-template-columns:
+                repeat(7, minmax(0, 1fr));
+
+            gap: 12px;
+
+            align-items: center;
+        }
+
+
+        .process-step {
+            min-height: 170px;
+
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            border-radius: 16px;
+
+            background: #0d131d;
+
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+
+        .process-step span {
+            width: 37px;
+            height: 37px;
+
+            display: grid;
+            place-items: center;
+
+            margin-bottom: 14px;
+
+            border-radius: 10px;
+
+            background: rgba(22,139,255,0.10);
+
+            color: #3aa0ff;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        .process-step strong {
+            font-size: 14px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .process-step small {
+            color: #77879a;
+
+            font-size: 11px;
+        }
+
+
+        .process-arrow {
+            color: #3aa0ff;
+
+            text-align: center;
+
+            font-size: 18px;
+        }
+
+
+
+        /* ================= STATUS ================= */
+
+        .status-box {
+            padding: 35px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 22px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(22,139,255,0.09),
+                    rgba(255,255,255,0.015)
+                );
+
+            border: 1px solid rgba(58,160,255,0.20);
+        }
+
+
+        .status-icon {
+            width: 58px;
+            height: 58px;
+
+            min-width: 58px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: rgba(22,139,255,0.12);
+
+            color: #3aa0ff;
+
+            font-size: 22px;
+        }
+
+
+        .status-box h3 {
+            font-size: 21px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .status-box p {
+            color: #8f9baa;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* ================= FOOTER ================= */
+
+        .project-footer {
+            padding:
+                45px
+                clamp(24px, 6vw, 110px);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+
+            background: #050911;
+
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+
+        .project-footer p {
+            color: #718093;
+
+            font-size: 12px;
+        }
+
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1100px) {
+
+            .project-hero {
+                grid-template-columns: 1fr;
+            }
+
+
+            .objective-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .design-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .responsive-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .feature-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .social-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .tech-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+
+            .process-arrow {
+                transform: rotate(90deg);
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .project-header {
+                min-height: 70px;
+            }
+
+
+            .project-logo span:last-child {
+                display: none;
+            }
+
+
+            .back-btn {
+                font-size: 12px;
+
+                padding: 9px 12px;
+            }
+
+
+            .project-hero {
+                padding-top: 70px;
+            }
+
+
+            .project-hero h1 {
+                font-size: 47px;
+            }
+
+
+            .objective-grid,
+            .design-grid,
+            .responsive-grid,
+            .feature-grid,
+            .social-grid,
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .website-visual {
+                min-height: auto;
+            }
+
+
+            .preview-person {
+                width: 95px;
+                height: 180px;
+            }
+
+
+            .preview-content {
+                max-width: 66%;
+            }
+
+
+            .status-box {
+                align-items: flex-start;
+            }
+
+
+            .project-footer {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="project-header">
+
+
+        <a
+            href="../index.html"
+            class="project-logo"
+        >
+
+            <span class="logo-mark">
+                OF
+            </span>
+
+            <span>
+                OZAMA FAROOK
+            </span>
+
+        </a>
+
+
+        <a
+            href="../index.html#portfolio"
+            class="back-btn"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Portfolio
+
+        </a>
+
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="project-hero">
+
+
+            <div>
+
+
+                <p class="project-label">
+                    PROJECT 03 • PERSONAL BRAND
+                </p>
+
+
+                <h1>
+
+                    Personal Website
+
+                    <span>
+                        & Branding
+                    </span>
+
+                </h1>
+
+
+                <p class="project-intro">
+
+                    A responsive personal portfolio website designed to create
+                    a professional digital identity, present technical experience,
+                    showcase projects and connect professional work with modern
+                    web technology.
+
+                </p>
+
+
+                <div class="project-meta">
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <span>
+                        CSS
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        Responsive Design
+                    </span>
+
+                    <span>
+                        Personal Branding
+                    </span>
+
+                    <span>
+                        Portfolio
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- WEBSITE VISUAL -->
+
+            <div class="website-visual">
+
+
+                <div class="browser-bar">
+
+
+                    <div class="browser-dots">
+
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+
+                    </div>
+
+
+                    <div class="browser-url">
+                        ozamafarook.com
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="website-preview">
+
+
+                    <div class="preview-nav">
+
+                        <div class="preview-logo">
+                            OF
+                        </div>
+
+
+                        <div class="preview-menu">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="preview-content">
+
+
+                        <div class="preview-small">
+                            HELLO, I'M
+                        </div>
+
+
+                        <div class="preview-name">
+
+                            OZAMA
+
+                            <span>
+                                FAROOK
+                            </span>
+
+                        </div>
+
+
+                        <div class="preview-role">
+                            ELV / AutoCAD Draftsman
+                        </div>
+
+
+                        <div class="preview-line"></div>
+
+                        <div class="preview-line short"></div>
+
+
+                        <div class="preview-buttons">
+
+                            <div class="preview-button"></div>
+
+                            <div class="preview-button secondary"></div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="preview-person"></div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= OVERVIEW ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    PROJECT OVERVIEW
+                </p>
+
+
+                <h2>
+                    Building a Professional Digital Identity
+                </h2>
+
+
+                <div class="project-description">
+
+                    The goal of this project is to create one central place where
+                    professional experience, technical skills, projects, CV,
+                    contact information and digital profiles can be presented
+                    through a clean and consistent personal brand.
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="objective-grid">
+
+
+                <div class="objective-card">
+
+                    <div class="objective-icon">
+
+                        <i class="fa-solid fa-user-tie"></i>
+
+                    </div>
+
+                    <h3>
+                        Professional Identity
+                    </h3>
+
+                    <p>
+                        Present experience, technical specialization and
+                        professional profile through a clear digital presence.
+                    </p>
+
+                </div>
+
+
+
+                <div class="objective-card">
+
+                    <div class="objective-icon">
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                    </div>
+
+                    <h3>
+                        Portfolio
+                    </h3>
+
+                    <p>
+                        Organize and showcase selected technical,
+                        technology and personal projects.
+                    </p>
+
+                </div>
+
+
+
+                <div class="objective-card">
+
+                    <div class="objective-icon">
+
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+
+                    </div>
+
+                    <h3>
+                        Responsive Design
+                    </h3>
+
+                    <p>
+                        Ensure the website works properly across
+                        desktop, tablet and mobile devices.
+                    </p>
+
+                </div>
+
+
+
+                <div class="objective-card">
+
+                    <div class="objective-icon">
+
+                        <i class="fa-solid fa-address-card"></i>
+
+                    </div>
+
+                    <h3>
+                        Easy Contact
+                    </h3>
+
+                    <p>
+                        Provide direct access to email, CV and
+                        professional social platforms.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= DESIGN SYSTEM ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    VISUAL SYSTEM
+                </p>
+
+
+                <h2>
+                    Professional Design Language
+                </h2>
+
+
+                <div class="project-description">
+
+                    The design uses a restrained dark interface with blue
+                    highlights, consistent cards and clean typography to create
+                    a modern technical and professional identity.
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="design-grid">
+
+
+                <div class="design-card">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                    <h3>
+                        Dark Theme
+                    </h3>
+
+                    <p>
+                        Deep charcoal and black backgrounds create
+                        a clean professional technology-focused appearance.
+                    </p>
+
+                </div>
+
+
+
+                <div class="design-card">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                    <h3>
+                        Blue Accent
+                    </h3>
+
+                    <p>
+                        Blue highlights are used consistently for
+                        navigation, buttons, icons and interactive elements.
+                    </p>
+
+                </div>
+
+
+
+                <div class="design-card">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <h3>
+                        Card-Based Layout
+                    </h3>
+
+                    <p>
+                        Consistent panels organize technical information
+                        without making the website feel overcrowded.
+                    </p>
+
+                </div>
+
+
+
+                <div class="design-card">
+
+                    <i class="fa-solid fa-font"></i>
+
+                    <h3>
+                        Strong Typography
+                    </h3>
+
+                    <p>
+                        Large headings and simple supporting text
+                        create clear visual hierarchy.
+                    </p>
+
+                </div>
+
+
+
+                <div class="design-card">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    <h3>
+                        Subtle Animation
+                    </h3>
+
+                    <p>
+                        Scroll reveal and hover effects provide movement
+                        while keeping the presentation professional.
+                    </p>
+
+                </div>
+
+
+
+                <div class="design-card">
+
+                    <i class="fa-solid fa-universal-access"></i>
+
+                    <h3>
+                        Clear Navigation
+                    </h3>
+
+                    <p>
+                        Sticky navigation and section highlighting make
+                        the website easy to explore.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= RESPONSIVE DESIGN ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    RESPONSIVE DESIGN
+                </p>
+
+
+                <h2>
+                    Designed for Every Screen
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="responsive-grid">
+
+
+                <div class="device-card">
+
+
+                    <div class="device-icon">
+
+                        <i class="fa-solid fa-desktop"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Desktop
+                    </h3>
+
+
+                    <p>
+                        Large multi-column layouts provide a detailed
+                        professional portfolio experience.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="device-card">
+
+
+                    <div class="device-icon">
+
+                        <i class="fa-solid fa-tablet-screen-button"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Tablet
+                    </h3>
+
+
+                    <p>
+                        Content automatically reorganizes into
+                        simplified layouts for medium-sized screens.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="device-card">
+
+
+                    <div class="device-icon">
+
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Mobile
+                    </h3>
+
+
+                    <p>
+                        Single-column layouts and a hamburger navigation
+                        provide a clean mobile experience.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= WEBSITE FEATURES ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    WEBSITE FEATURES
+                </p>
+
+
+                <h2>
+                    Functional Portfolio Experience
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="feature-grid">
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Sticky Navigation
+                    </h3>
+
+                    <p>
+                        The main header remains available while
+                        visitors move through the portfolio.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Active Section Highlight
+                    </h3>
+
+                    <p>
+                        Navigation automatically highlights the
+                        section currently being viewed.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Mobile Menu
+                    </h3>
+
+                    <p>
+                        A responsive hamburger menu keeps navigation
+                        accessible on smaller devices.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">
+                        04
+                    </div>
+
+                    <h3>
+                        CV Download
+                    </h3>
+
+                    <p>
+                        Visitors can download the professional CV
+                        directly from the homepage.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Project Case Studies
+                    </h3>
+
+                    <p>
+                        Dedicated project pages provide more detail
+                        about selected professional and technical work.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">
+                        06
+                    </div>
+
+                    <h3>
+                        Scroll Animation
+                    </h3>
+
+                    <p>
+                        Subtle reveal animations improve presentation
+                        without distracting from the content.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= SOCIAL BRAND ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    DIGITAL PRESENCE
+                </p>
+
+
+                <h2>
+                    Connected Personal Brand
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="social-grid">
+
+
+                <div class="social-card">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                    <div>
+
+                        <span>
+                            LinkedIn
+                        </span>
+
+                        <strong>
+                            OzamaFarok
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="social-card">
+
+                    <i class="fa-brands fa-github"></i>
+
+                    <div>
+
+                        <span>
+                            GitHub
+                        </span>
+
+                        <strong>
+                            OzamaFarok
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="social-card">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                    <div>
+
+                        <span>
+                            YouTube
+                        </span>
+
+                        <strong>
+                            OZiL OG
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="social-card">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                    <div>
+
+                        <span>
+                            Instagram
+                        </span>
+
+                        <strong>
+                            @m10_juniorr
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= TECHNOLOGY ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    DEVELOPMENT
+                </p>
+
+
+                <h2>
+                    Technology Stack
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="tech-grid">
+
+
+                <div class="tech-card">
+
+                    <i class="fa-brands fa-html5"></i>
+
+                    <strong>
+                        HTML5
+                    </strong>
+
+                </div>
+
+
+                <div class="tech-card">
+
+                    <i class="fa-brands fa-css3-alt"></i>
+
+                    <strong>
+                        CSS3
+                    </strong>
+
+                </div>
+
+
+                <div class="tech-card">
+
+                    <i class="fa-brands fa-js"></i>
+
+                    <strong>
+                        JavaScript
+                    </strong>
+
+                </div>
+
+
+                <div class="tech-card">
+
+                    <i class="fa-solid fa-icons"></i>
+
+                    <strong>
+                        Font Awesome
+                    </strong>
+
+                </div>
+
+
+                <div class="tech-card">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <strong>
+                        Responsive UI
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= PROCESS ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    DEVELOPMENT PROCESS
+                </p>
+
+
+                <h2>
+                    From Idea to Website
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="process">
+
+
+                <div class="process-step">
+
+                    <span>
+                        01
+                    </span>
+
+                    <strong>
+                        Concept
+                    </strong>
+
+                    <small>
+                        Personal website idea
+                    </small>
+
+                </div>
+
+
+                <div class="process-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span>
+                        02
+                    </span>
+
+                    <strong>
+                        Design
+                    </strong>
+
+                    <small>
+                        Dark professional UI
+                    </small>
+
+                </div>
+
+
+                <div class="process-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span>
+                        03
+                    </span>
+
+                    <strong>
+                        Build
+                    </strong>
+
+                    <small>
+                        HTML, CSS & JavaScript
+                    </small>
+
+                </div>
+
+
+                <div class="process-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <span>
+                        04
+                    </span>
+
+                    <strong>
+                        Test
+                    </strong>
+
+                    <small>
+                        Desktop & mobile
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= STATUS ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    PROJECT STATUS
+                </p>
+
+
+                <h2>
+                    Active Development
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="status-box">
+
+
+                <div class="status-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+
+                <div>
+
+
+                    <h3>
+                        Portfolio Website In Development
+                    </h3>
+
+
+                    <p>
+
+                        The core personal portfolio is functional and responsive.
+                        New project pages, professional content and future
+                        improvements can continue to be added as the portfolio grows.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="project-footer">
+
+
+        <p>
+            © 2026 Ozama Farook. All rights reserved.
+        </p>
+
+
+        <a
+            href="../index.html#portfolio"
+            class="back-btn"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Portfolio
+
+        </a>
+
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        ELV / CCTV Project Portfolio | Ozama Farook
+    </title>
+
+    <meta
+        name="description"
+        content="ELV and CCTV technical design portfolio by Ozama Farook featuring CCTV layouts, KPOI planning, schematics, MOI-SSD documentation and AutoCAD drafting."
+    >
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- MAIN WEBSITE CSS -->
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+
+    <!-- PROJECT PAGE CSS -->
+    <style>
+
+        body {
+            background: #070b12;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        .project-header {
+            width: 100%;
+            min-height: 80px;
+
+            padding: 0 clamp(24px, 6vw, 110px);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 25px;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(7, 11, 18, 0.97);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+
+        .project-logo {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            font-weight: 700;
+        }
+
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 11px 17px;
+
+            border-radius: 10px;
+
+            border: 1px solid rgba(58,160,255,0.35);
+
+            color: #dcecff;
+
+            font-size: 14px;
+
+            transition: 0.25s ease;
+        }
+
+
+        .back-btn:hover {
+            background: rgba(22,139,255,0.10);
+
+            border-color: #3aa0ff;
+        }
+
+
+
+        /* ================= HERO ================= */
+
+        .project-hero {
+            width: 100%;
+            max-width: 1600px;
+
+            margin: 0 auto;
+
+            padding:
+                110px
+                clamp(24px, 6vw, 110px)
+                90px;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.08fr)
+                minmax(340px, 0.92fr);
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .project-label {
+            color: #3aa0ff;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .project-hero h1 {
+            font-size: clamp(52px, 6vw, 88px);
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 26px;
+        }
+
+
+        .project-hero h1 span {
+            display: block;
+
+            color: #3aa0ff;
+        }
+
+
+        .project-intro {
+            max-width: 760px;
+
+            color: #96a4b6;
+
+            font-size: 17px;
+
+            line-height: 1.85;
+
+            margin-bottom: 32px;
+        }
+
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 11px;
+        }
+
+
+        .project-meta span {
+            padding: 9px 14px;
+
+            border-radius: 999px;
+
+            background: rgba(22,139,255,0.08);
+
+            border: 1px solid rgba(58,160,255,0.18);
+
+            color: #b9d9ff;
+
+            font-size: 13px;
+        }
+
+
+
+        /* ================= HERO TECHNICAL VISUAL ================= */
+
+        .drawing-visual {
+            min-height: 450px;
+
+            padding: 27px;
+
+            border-radius: 26px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(22,139,255,0.08),
+                    rgba(255,255,255,0.012)
+                );
+
+            border: 1px solid rgba(58,160,255,0.20);
+
+            box-shadow:
+                0 30px 70px rgba(0,0,0,0.32);
+        }
+
+
+        .drawing-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 22px;
+        }
+
+
+        .drawing-dots {
+            display: flex;
+
+            gap: 7px;
+        }
+
+
+        .drawing-dot {
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.20);
+        }
+
+
+        .drawing-title {
+            color: #75869b;
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+        }
+
+
+        .drawing-sheet {
+            min-height: 350px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 24px;
+
+            border-radius: 18px;
+
+            background: #090f18;
+
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+
+        .drawing-grid {
+            position: absolute;
+
+            inset: 0;
+
+            opacity: 0.23;
+
+            background-image:
+                linear-gradient(
+                    rgba(58,160,255,0.12) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(58,160,255,0.12) 1px,
+                    transparent 1px
+                );
+
+            background-size: 28px 28px;
+        }
+
+
+        .floor-plan {
+            width: 100%;
+            height: 250px;
+
+            position: relative;
+            z-index: 2;
+
+            margin-bottom: 18px;
+
+            border: 2px solid rgba(58,160,255,0.28);
+        }
+
+
+        .room {
+            position: absolute;
+
+            border: 1px solid rgba(255,255,255,0.20);
+
+            color: #71839a;
+
+            font-size: 10px;
+
+            display: grid;
+            place-items: center;
+        }
+
+
+        .room-a {
+            left: 7%;
+            top: 9%;
+
+            width: 38%;
+            height: 40%;
+        }
+
+
+        .room-b {
+            right: 7%;
+            top: 9%;
+
+            width: 40%;
+            height: 40%;
+        }
+
+
+        .room-c {
+            left: 7%;
+            bottom: 10%;
+
+            width: 52%;
+            height: 30%;
+        }
+
+
+        .room-d {
+            right: 7%;
+            bottom: 10%;
+
+            width: 27%;
+            height: 30%;
+        }
+
+
+        .camera {
+            position: absolute;
+
+            width: 28px;
+            height: 28px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: rgba(22,139,255,0.18);
+
+            border: 1px solid rgba(58,160,255,0.40);
+
+            color: #3aa0ff;
+
+            z-index: 4;
+
+            font-size: 11px;
+        }
+
+
+        .cam-1 {
+            left: 12%;
+            top: 18%;
+        }
+
+
+        .cam-2 {
+            left: 47%;
+            top: 14%;
+        }
+
+
+        .cam-3 {
+            right: 13%;
+            top: 34%;
+        }
+
+
+        .cam-4 {
+            left: 24%;
+            bottom: 13%;
+        }
+
+
+        .cam-5 {
+            right: 19%;
+            bottom: 14%;
+        }
+
+
+        .sheet-details {
+            position: relative;
+            z-index: 3;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+        }
+
+
+        .sheet-info {
+            padding: 11px;
+
+            border-radius: 10px;
+
+            background: rgba(255,255,255,0.025);
+
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+
+        .sheet-info span {
+            display: block;
+
+            color: #708197;
+
+            font-size: 9px;
+
+            margin-bottom: 3px;
+        }
+
+
+        .sheet-info strong {
+            color: #dce7f5;
+
+            font-size: 11px;
+        }
+
+
+
+        /* ================= GENERAL SECTIONS ================= */
+
+        .project-section {
+            width: 100%;
+            max-width: 1600px;
+
+            margin: 0 auto;
+
+            padding:
+                90px
+                clamp(24px, 6vw, 110px);
+
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+
+        .project-section-heading {
+            max-width: 830px;
+
+            margin-bottom: 45px;
+        }
+
+
+        .project-section-heading > p {
+            color: #3aa0ff;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .project-section-heading h2 {
+            font-size: clamp(36px, 4vw, 58px);
+
+            line-height: 1.1;
+
+            letter-spacing: -2px;
+        }
+
+
+        .project-description {
+            margin-top: 18px;
+
+            color: #8f9baa;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+
+        /* ================= SERVICES / CAPABILITIES ================= */
+
+        .capability-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        .capability-card {
+            min-height: 250px;
+
+            padding: 28px;
+
+            border-radius: 18px;
+
+            background: #0d131d;
+
+            border: 1px solid rgba(255,255,255,0.07);
+
+            transition: 0.3s ease;
+        }
+
+
+        .capability-card:hover {
+            transform: translateY(-5px);
+
+            border-color: rgba(58,160,255,0.34);
+        }
+
+
+        .capability-icon {
+            width: 52px;
+            height: 52px;
+
+            display: grid;
+            place-items: center;
+
+            margin-bottom: 22px;
+
+            border-radius: 14px;
+
+            background: rgba(22,139,255,0.10);
+
+            border: 1px solid rgba(58,160,255,0.18);
+
+            color: #3aa0ff;
+
+            font-size: 20px;
+        }
+
+
+        .capability-card h3 {
+            font-size: 19px;
+
+            margin-bottom: 11px;
+        }
+
+
+        .capability-card p {
+            color: #8f9baa;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* ================= DESIGN SYSTEMS ================= */
+
+        .systems-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        .system-card {
+            position: relative;
+
+            min-height: 190px;
+
+            padding: 28px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(22,139,255,0.055),
+                    rgba(255,255,255,0.012)
+                );
+
+            border: 1px solid rgba(58,160,255,0.13);
+        }
+
+
+        .system-number {
+            position: absolute;
+
+            top: 20px;
+            right: 22px;
+
+            color: rgba(58,160,255,0.42);
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        .system-card i {
+            color: #3aa0ff;
+
+            font-size: 27px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .system-card h3 {
+            font-size: 19px;
+
+            margin-bottom: 9px;
+        }
+
+
+        .system-card p {
+            color: #8795a7;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* ================= WORKFLOW ================= */
+
+        .workflow {
+            display: grid;
+
+            grid-template-columns:
+                repeat(7, minmax(0, 1fr));
+
+            gap: 12px;
+
+            align-items: center;
+        }
+
+
+        .workflow-step {
+            min-height: 170px;
+
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            border-radius: 16px;
+
+            background: #0d131d;
+
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+
+        .workflow-step span {
+            width: 37px;
+            height: 37px;
+
+            display: grid;
+            place-items: center;
+
+            margin-bottom: 14px;
+
+            border-radius: 10px;
+
+            background: rgba(22,139,255,0.10);
+
+            color: #3aa0ff;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        .workflow-step strong {
+            font-size: 14px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .workflow-step small {
+            color: #77879a;
+
+            font-size: 11px;
+        }
+
+
+        .workflow-arrow {
+            color: #3aa0ff;
+
+            text-align: center;
+
+            font-size: 18px;
+        }
+
+
+
+        /* ================= COMPLIANCE ================= */
+
+        .compliance-layout {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(0, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .compliance-card {
+            padding: 30px;
+
+            border-radius: 20px;
+
+            background: #0d131d;
+
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+
+        .compliance-card h3 {
+            font-size: 22px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .check-list {
+            display: grid;
+
+            gap: 14px;
+        }
+
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 13px;
+
+            color: #98a6b6;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        .check-item i {
+            width: 25px;
+            height: 25px;
+
+            min-width: 25px;
+
+            display: grid;
+            place-items: center;
+
+            margin-top: 1px;
+
+            border-radius: 50%;
+
+            background: rgba(22,139,255,0.10);
+
+            color: #3aa0ff;
+
+            font-size: 10px;
+        }
+
+
+
+        /* ================= DELIVERABLES ================= */
+
+        .deliverable-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 16px;
+        }
+
+
+        .deliverable-card {
+            padding: 25px;
+
+            border-radius: 17px;
+
+            background: #0d131d;
+
+            border: 1px solid rgba(255,255,255,0.07);
+
+            text-align: center;
+        }
+
+
+        .deliverable-card i {
+            color: #3aa0ff;
+
+            font-size: 27px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .deliverable-card strong {
+            display: block;
+
+            font-size: 15px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .deliverable-card small {
+            color: #748396;
+
+            font-size: 11px;
+        }
+
+
+
+        /* ================= SOFTWARE ================= */
+
+        .software-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 16px;
+        }
+
+
+        .software-card {
+            padding: 28px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(22,139,255,0.05),
+                    rgba(255,255,255,0.012)
+                );
+
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+
+        .software-card i {
+            display: block;
+
+            color: #3aa0ff;
+
+            font-size: 29px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .software-card strong {
+            font-size: 15px;
+        }
+
+
+
+        /* ================= STATUS ================= */
+
+        .status-box {
+            padding: 35px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 22px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(22,139,255,0.09),
+                    rgba(255,255,255,0.015)
+                );
+
+            border: 1px solid rgba(58,160,255,0.20);
+        }
+
+
+        .status-icon {
+            width: 58px;
+            height: 58px;
+
+            min-width: 58px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: rgba(22,139,255,0.12);
+
+            color: #3aa0ff;
+
+            font-size: 22px;
+        }
+
+
+        .status-box h3 {
+            font-size: 21px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .status-box p {
+            color: #8f9baa;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* ================= FOOTER ================= */
+
+        .project-footer {
+            padding:
+                45px
+                clamp(24px, 6vw, 110px);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+
+            background: #050911;
+
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+
+        .project-footer p {
+            color: #718093;
+
+            font-size: 12px;
+        }
+
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1100px) {
+
+            .project-hero {
+                grid-template-columns: 1fr;
+            }
+
+
+            .capability-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .systems-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .workflow {
+                grid-template-columns: 1fr;
+            }
+
+
+            .workflow-arrow {
+                transform: rotate(90deg);
+            }
+
+
+            .deliverable-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .compliance-layout {
+                grid-template-columns: 1fr;
+            }
+
+
+            .software-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .project-header {
+                min-height: 70px;
+            }
+
+
+            .project-logo span:last-child {
+                display: none;
+            }
+
+
+            .back-btn {
+                font-size: 12px;
+
+                padding: 9px 12px;
+            }
+
+
+            .project-hero {
+                padding-top: 70px;
+            }
+
+
+            .project-hero h1 {
+                font-size: 47px;
+            }
+
+
+            .capability-grid,
+            .systems-grid,
+            .deliverable-grid,
+            .software-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .drawing-visual {
+                min-height: auto;
+            }
+
+
+            .status-box {
+                align-items: flex-start;
+            }
+
+
+            .project-footer {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="project-header">
+
+
+        <a
+            href="../index.html"
+            class="project-logo"
+        >
+
+            <span class="logo-mark">
+                OF
+            </span>
+
+            <span>
+                OZAMA FAROOK
+            </span>
+
+        </a>
+
+
+        <a
+            href="../index.html#portfolio"
+            class="back-btn"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Portfolio
+
+        </a>
+
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="project-hero">
+
+
+            <div>
+
+
+                <p class="project-label">
+                    PROJECT 02 • ELV / SECURITY SYSTEMS
+                </p>
+
+
+                <h1>
+
+                    ELV / CCTV
+
+                    <span>
+                        Project Portfolio
+                    </span>
+
+                </h1>
+
+
+                <p class="project-intro">
+
+                    Professional ELV and security system drafting focused on
+                    accurate CCTV layouts, camera positioning, schematic diagrams,
+                    system coordination, technical documentation and
+                    authority-ready project drawings.
+
+                </p>
+
+
+                <div class="project-meta">
+
+                    <span>
+                        AutoCAD
+                    </span>
+
+                    <span>
+                        CCTV
+                    </span>
+
+                    <span>
+                        ELV
+                    </span>
+
+                    <span>
+                        KPOI
+                    </span>
+
+                    <span>
+                        MOI-SSD
+                    </span>
+
+                    <span>
+                        Technical Documentation
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- TECHNICAL DRAWING VISUAL -->
+
+            <div class="drawing-visual">
+
+
+                <div class="drawing-topbar">
+
+
+                    <div class="drawing-dots">
+
+                        <div class="drawing-dot"></div>
+                        <div class="drawing-dot"></div>
+                        <div class="drawing-dot"></div>
+
+                    </div>
+
+
+                    <div class="drawing-title">
+                        CCTV-GF-LAYOUT.DWG
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="drawing-sheet">
+
+
+                    <div class="drawing-grid"></div>
+
+
+                    <div class="floor-plan">
+
+
+                        <div class="room room-a">
+                            AREA 01
+                        </div>
+
+
+                        <div class="room room-b">
+                            AREA 02
+                        </div>
+
+
+                        <div class="room room-c">
+                            MAIN AREA
+                        </div>
+
+
+                        <div class="room room-d">
+                            CONTROL
+                        </div>
+
+
+                        <div class="camera cam-1">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+
+
+                        <div class="camera cam-2">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+
+
+                        <div class="camera cam-3">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+
+
+                        <div class="camera cam-4">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+
+
+                        <div class="camera cam-5">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="sheet-details">
+
+
+                        <div class="sheet-info">
+
+                            <span>
+                                DRAWING
+                            </span>
+
+                            <strong>
+                                CCTV Layout
+                            </strong>
+
+                        </div>
+
+
+                        <div class="sheet-info">
+
+                            <span>
+                                SYSTEM
+                            </span>
+
+                            <strong>
+                                Security / ELV
+                            </strong>
+
+                        </div>
+
+
+                        <div class="sheet-info">
+
+                            <span>
+                                SOFTWARE
+                            </span>
+
+                            <strong>
+                                AutoCAD
+                            </strong>
+
+                        </div>
+
+
+                        <div class="sheet-info">
+
+                            <span>
+                                STATUS
+                            </span>
+
+                            <strong>
+                                Coordinated
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= OVERVIEW ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    PROJECT OVERVIEW
+                </p>
+
+
+                <h2>
+                    Technical Design With Precision
+                </h2>
+
+
+                <div class="project-description">
+
+                    My ELV drafting work focuses on transforming project requirements,
+                    architectural drawings and security requirements into clear,
+                    coordinated and professionally documented technical drawings
+                    suitable for review, execution and authority submissions.
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="capability-grid">
+
+
+                <div class="capability-card">
+
+
+                    <div class="capability-icon">
+
+                        <i class="fa-solid fa-video"></i>
+
+                    </div>
+
+
+                    <h3>
+                        CCTV Layouts
+                    </h3>
+
+
+                    <p>
+                        Camera positioning, viewing direction, coverage planning,
+                        identification and coordinated security layouts.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="capability-card">
+
+
+                    <div class="capability-icon">
+
+                        <i class="fa-solid fa-diagram-project"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Schematic Diagrams
+                    </h3>
+
+
+                    <p>
+                        Clear system connectivity diagrams covering cameras,
+                        network equipment, recording systems and workstations.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="capability-card">
+
+
+                    <div class="capability-icon">
+
+                        <i class="fa-solid fa-crosshairs"></i>
+
+                    </div>
+
+
+                    <h3>
+                        KPOI Planning
+                    </h3>
+
+
+                    <p>
+                        Identification and documentation of Key Points of Interest
+                        requiring dedicated security camera coverage.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="capability-card">
+
+
+                    <div class="capability-icon">
+
+                        <i class="fa-solid fa-file-shield"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Authority Documentation
+                    </h3>
+
+
+                    <p>
+                        Professional drawing preparation, revisions and documentation
+                        based on technical review comments and project requirements.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= ELV SYSTEMS ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    SYSTEM EXPERIENCE
+                </p>
+
+
+                <h2>
+                    ELV & Security Systems
+                </h2>
+
+
+                <div class="project-description">
+
+                    Technical drafting and coordination across multiple ELV systems,
+                    with particular focus on security and low-current infrastructure.
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="systems-grid">
+
+
+                <div class="system-card">
+
+                    <span class="system-number">
+                        01
+                    </span>
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    <h3>
+                        CCTV
+                    </h3>
+
+                    <p>
+                        IP cameras, NVR/VMS systems, storage,
+                        monitors and control room layouts.
+                    </p>
+
+                </div>
+
+
+
+                <div class="system-card">
+
+                    <span class="system-number">
+                        02
+                    </span>
+
+                    <i class="fa-solid fa-id-card"></i>
+
+                    <h3>
+                        Access Control
+                    </h3>
+
+                    <p>
+                        Readers, doors, controllers and related
+                        system coordination.
+                    </p>
+
+                </div>
+
+
+
+                <div class="system-card">
+
+                    <span class="system-number">
+                        03
+                    </span>
+
+                    <i class="fa-solid fa-network-wired"></i>
+
+                    <h3>
+                        Structured Cabling
+                    </h3>
+
+                    <p>
+                        Data outlets, racks, network infrastructure
+                        and cable routing.
+                    </p>
+
+                </div>
+
+
+
+                <div class="system-card">
+
+                    <span class="system-number">
+                        04
+                    </span>
+
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+
+                    <h3>
+                        Fire Alarm
+                    </h3>
+
+                    <p>
+                        Device layouts, modules, system coordination
+                        and technical documentation.
+                    </p>
+
+                </div>
+
+
+
+                <div class="system-card">
+
+                    <span class="system-number">
+                        05
+                    </span>
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <h3>
+                        Intrusion Systems
+                    </h3>
+
+                    <p>
+                        Security devices, detection points and
+                        coordinated ELV layouts.
+                    </p>
+
+                </div>
+
+
+
+                <div class="system-card">
+
+                    <span class="system-number">
+                        06
+                    </span>
+
+                    <i class="fa-solid fa-server"></i>
+
+                    <h3>
+                        Control & Rack Rooms
+                    </h3>
+
+                    <p>
+                        Equipment layouts, rack locations, workstation
+                        arrangements and technical coordination.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= WORKFLOW ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    DESIGN WORKFLOW
+                </p>
+
+
+                <h2>
+                    From Requirement to Submission
+                </h2>
+
+
+                <div class="project-description">
+
+                    A structured workflow helps ensure that every technical drawing
+                    is accurate, coordinated and ready for project review.
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="workflow">
+
+
+                <div class="workflow-step">
+
+                    <span>
+                        01
+                    </span>
+
+                    <strong>
+                        Review
+                    </strong>
+
+                    <small>
+                        Project requirements
+                    </small>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>
+                        02
+                    </span>
+
+                    <strong>
+                        Draft
+                    </strong>
+
+                    <small>
+                        AutoCAD layouts
+                    </small>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>
+                        03
+                    </span>
+
+                    <strong>
+                        Coordinate
+                    </strong>
+
+                    <small>
+                        Architecture & ELV
+                    </small>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <span>
+                        04
+                    </span>
+
+                    <strong>
+                        Submit
+                    </strong>
+
+                    <small>
+                        Technical documentation
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= MOI / COMPLIANCE ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    COMPLIANCE & COORDINATION
+                </p>
+
+
+                <h2>
+                    Professional Drawing Standards
+                </h2>
+
+
+                <div class="project-description">
+
+                    Security drawings require more than placing camera symbols.
+                    Equipment, legends, schematics, coverage and documentation
+                    must work together as one coordinated technical package.
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="compliance-layout">
+
+
+                <div class="compliance-card">
+
+
+                    <h3>
+                        CCTV Drawing Coordination
+                    </h3>
+
+
+                    <div class="check-list">
+
+
+                        <div class="check-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Camera identification and location coordination
+                            </span>
+
+                        </div>
+
+
+                        <div class="check-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                KPOI camera identification and dedicated coverage
+                            </span>
+
+                        </div>
+
+
+                        <div class="check-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                CCTV control room and equipment coordination
+                            </span>
+
+                        </div>
+
+
+                        <div class="check-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Rack, monitor and workstation information
+                            </span>
+
+                        </div>
+
+
+                        <div class="check-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Camera streams and schematic connectivity
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="compliance-card">
+
+
+                    <h3>
+                        Technical Documentation
+                    </h3>
+
+
+                    <div class="check-list">
+
+
+                        <div class="check-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Drawing legend and equipment description
+                            </span>
+
+                        </div>
+
+
+                        <div class="check-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                BOQ and drawing consistency
+                            </span>
+
+                        </div>
+
+
+                        <div class="check-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Storage and recording requirements
+                            </span>
+
+                        </div>
+
+
+                        <div class="check-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                UPS and system power documentation
+                            </span>
+
+                        </div>
+
+
+                        <div class="check-item">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <span>
+                                Revision and authority comment coordination
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= DELIVERABLES ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    PROJECT DELIVERABLES
+                </p>
+
+
+                <h2>
+                    Technical Drawing Package
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="deliverable-grid">
+
+
+                <div class="deliverable-card">
+
+                    <i class="fa-solid fa-map"></i>
+
+                    <strong>
+                        CCTV Layout
+                    </strong>
+
+                    <small>
+                        Camera positioning & coverage
+                    </small>
+
+                </div>
+
+
+                <div class="deliverable-card">
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    <strong>
+                        Schematic
+                    </strong>
+
+                    <small>
+                        System connectivity
+                    </small>
+
+                </div>
+
+
+                <div class="deliverable-card">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <strong>
+                        BOQ
+                    </strong>
+
+                    <small>
+                        Equipment coordination
+                    </small>
+
+                </div>
+
+
+                <div class="deliverable-card">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <strong>
+                        Documentation
+                    </strong>
+
+                    <small>
+                        Legends & schedules
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= SOFTWARE ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    TOOLS & SOFTWARE
+                </p>
+
+
+                <h2>
+                    Technical Toolkit
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="software-grid">
+
+
+                <div class="software-card">
+
+                    <i class="fa-solid fa-compass-drafting"></i>
+
+                    <strong>
+                        AutoCAD
+                    </strong>
+
+                </div>
+
+
+                <div class="software-card">
+
+                    <i class="fa-solid fa-cubes"></i>
+
+                    <strong>
+                        Revit
+                    </strong>
+
+                </div>
+
+
+                <div class="software-card">
+
+                    <i class="fa-solid fa-table"></i>
+
+                    <strong>
+                        Excel
+                    </strong>
+
+                </div>
+
+
+                <div class="software-card">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    <strong>
+                        PDF Documentation
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= STATUS ================= -->
+
+        <section class="project-section">
+
+
+            <div class="project-section-heading">
+
+
+                <p>
+                    PROFESSIONAL FOCUS
+                </p>
+
+
+                <h2>
+                    Accuracy • Coordination • Compliance
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="status-box">
+
+
+                <div class="status-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </div>
+
+
+                <div>
+
+
+                    <h3>
+                        Professional ELV Documentation
+                    </h3>
+
+
+                    <p>
+
+                        My objective is to produce clear and coordinated technical
+                        drawings that help project teams understand the system,
+                        execute the installation and complete review requirements
+                        efficiently.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="project-footer">
+
+
+        <p>
+            © 2026 Ozama Farook. All rights reserved.
+        </p>
+
+
+        <a
+            href="../index.html#portfolio"
+            class="back-btn"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Portfolio
+
+        </a>
+
+
+    </footer>
+
+
+</body>
+
+</html>
