@@ -313,3 +313,294 @@ a:focus-visible,button:focus-visible,[role="tab"]:focus-visible{outline:3px soli
   .hero-technical-layer{opacity:.12}
   .hero-technical-layer .tech-camera,.hero-technical-layer .tech-rack{display:none}
 }
+
+/* V16 corrected — approved technical/recruiter hero, visibly distinct from V15 */
+.hero{
+  padding:52px 0 22px;
+  min-height:780px;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 82% 28%,rgba(47,141,231,.14),transparent 28%),
+    linear-gradient(180deg,#fbfdff 0%,#f4f8fc 100%);
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(21,118,212,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(21,118,212,.045) 1px,transparent 1px);
+  background-size:34px 34px;
+  pointer-events:none;
+  z-index:0;
+}
+.hero-grid{
+  grid-template-columns:1.06fr .94fr;
+  gap:88px;
+  align-items:center;
+  min-height:665px;
+  position:relative;
+  z-index:4;
+}
+.hero-copy{position:relative;z-index:5;padding-top:4px}
+.hero-professional-label{
+  margin-bottom:24px;
+  font-size:11px;
+  letter-spacing:.22em;
+}
+.hero-copy .hero-name{
+  font-size:clamp(66px,6.2vw,94px);
+  line-height:.9;
+  letter-spacing:-.06em;
+  max-width:590px;
+}
+.hero-copy .hero-name-accent{display:block;margin-top:8px}
+.hero-role{
+  margin:18px 0 10px;
+  font-size:clamp(27px,2.25vw,38px);
+  line-height:1.06;
+  color:#111827;
+}
+.hero-specialties{
+  margin:0 0 26px;
+  color:#526b86;
+  font-size:14px;
+  line-height:1.55;
+  font-weight:650;
+  letter-spacing:.006em;
+}
+.hero-specialties b{color:#7e96ad;padding:0 3px}
+.hero-status-line{
+  margin:0 0 26px;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:11px 0;
+  color:#4f657d;
+  font-size:13px;
+  font-weight:700;
+}
+.hero-status-line span{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.hero-status-line span+span{margin-left:18px;padding-left:18px;border-left:1px solid #bdcbd9}
+.hero-status-line i{color:var(--blue)}
+.hero-status-line .available{
+  flex-basis:100%;
+  margin-left:0!important;
+  padding-left:0!important;
+  border-left:0!important;
+  margin-top:1px;
+  color:#5f7287;
+}
+.hero-status-line .available i{font-size:8px;color:#24a866}
+.hero-copy .hero-lead{
+  max-width:610px;
+  margin:0 0 26px;
+  font-size:17px;
+  line-height:1.62;
+  color:#536b82;
+}
+.hero-actions{gap:14px;margin-top:2px}
+.hero-actions .btn{min-width:172px}
+.hero-socials{margin-top:22px}
+
+.hero-visual{
+  min-height:610px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+  z-index:4;
+}
+.hero-blueprint{
+  position:absolute;
+  inset:8% 0 7% 12%;
+  border-radius:40px;
+  border:1px solid rgba(21,118,212,.13);
+  background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(229,242,255,.76));
+  transform:translate(32px,-6px);
+  box-shadow:none;
+}
+.hero-blueprint::before{
+  content:"";
+  position:absolute;
+  inset:16px -28px -10px 34px;
+  border-radius:38px;
+  background:linear-gradient(155deg,rgba(225,239,253,.72),rgba(197,224,249,.44));
+  border:1px solid rgba(21,118,212,.12);
+}
+.hero-blueprint::after{
+  content:"";
+  position:absolute;
+  right:-58px;
+  top:20px;
+  width:105px;
+  height:79%;
+  border-radius:30px;
+  background:linear-gradient(180deg,rgba(47,143,230,.82),rgba(21,118,212,.38));
+  box-shadow:0 24px 55px rgba(21,118,212,.13);
+}
+.profile-frame{
+  position:relative;
+  z-index:3;
+  width:min(468px,91%);
+  border-radius:34px;
+  overflow:hidden;
+  border:3px solid rgba(255,255,255,.92);
+  background:linear-gradient(180deg,#eef4f8,#dce7ef);
+  box-shadow:0 30px 70px rgba(13,45,81,.18);
+}
+.profile-frame::after{height:16%;background:linear-gradient(transparent,rgba(11,31,58,.07))}
+.profile-frame img{
+  width:100%;
+  height:596px;
+  object-fit:cover;
+  object-position:center top;
+}
+.hero-signature{
+  left:auto!important;
+  right:-4%!important;
+  top:auto!important;
+  bottom:5%!important;
+  transform:rotate(-5deg)!important;
+  background:rgba(255,255,255,.97)!important;
+  border:1px solid rgba(14,48,86,.08)!important;
+  border-radius:18px!important;
+  padding:13px 22px 12px!important;
+  box-shadow:0 18px 38px rgba(17,44,80,.14)!important;
+}
+.hero-signature span{font-size:35px;color:#0e58b5}
+.hero-signature small{font-size:8px;color:#60748c}
+.hero-vertical-copy{display:none!important}
+.hero-technical-layer{
+  position:absolute;
+  inset:7% -4% 4% 7%;
+  z-index:1;
+  pointer-events:none;
+  opacity:.16;
+}
+.hero-technical-layer .tech-camera,
+.hero-technical-layer .tech-rack{width:32px;height:32px;border-radius:9px;background:rgba(242,249,255,.72)}
+.hero-microcopy{
+  position:absolute;
+  right:-15%;
+  top:8%;
+  z-index:5;
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  padding-left:18px;
+  border-left:1px solid rgba(21,118,212,.28);
+  color:#7596ba;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.2em;
+}
+.hero-edge-blueprint{
+  position:absolute;
+  z-index:1;
+  pointer-events:none;
+  background-image:url('images/drawings/cctv-system-layout.webp');
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity:.085;
+  filter:grayscale(1) sepia(.25) hue-rotate(165deg) saturate(2.2) contrast(1.15);
+}
+.hero-edge-blueprint-left{
+  left:-8%;
+  bottom:4%;
+  width:36%;
+  height:74%;
+  background-position:9% center;
+  transform:rotate(-2deg);
+  -webkit-mask-image:linear-gradient(to right,#000 16%,transparent 92%);
+  mask-image:linear-gradient(to right,#000 16%,transparent 92%);
+}
+.hero-edge-blueprint-right{
+  right:-8%;
+  bottom:1%;
+  width:36%;
+  height:53%;
+  background-position:84% 62%;
+  transform:rotate(-8deg);
+  -webkit-mask-image:linear-gradient(to left,#000 12%,transparent 92%);
+  mask-image:linear-gradient(to left,#000 12%,transparent 92%);
+}
+.hero-left-microcopy{
+  position:absolute;
+  left:28px;
+  bottom:78px;
+  z-index:4;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  color:#7a99b8;
+  font-size:8px;
+  font-weight:850;
+  letter-spacing:.22em;
+}
+.hero-left-microcopy::after{content:"";width:22px;height:2px;background:var(--blue);margin-top:10px}
+.hero-bottom-strip{
+  position:relative;
+  z-index:5;
+  min-height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  margin-top:-22px;
+  color:#7e9ab8;
+}
+.hero-bottom-strip b{font-size:9px;font-weight:800;letter-spacing:.2em;white-space:nowrap}
+.hero-bottom-strip i{width:1px;height:10px;background:#b9c9d9}
+.hero-bottom-strip>span{width:42px;height:1px;background:#9db6cf}
+
+@media(max-width:1180px){
+  .hero-grid{gap:58px}
+  .hero-microcopy{right:-8%}
+  .hero-blueprint::after{right:-34px;width:76px}
+}
+@media(max-width:980px){
+  .hero{padding-top:42px;min-height:auto}
+  .hero-grid{grid-template-columns:1fr;gap:24px;min-height:auto}
+  .hero-copy{order:1}
+  .hero-visual{order:2;min-height:540px}
+  .hero-copy .hero-name{font-size:clamp(54px,9vw,76px)}
+  .hero-status-line span+span{margin-left:12px;padding-left:12px}
+  .hero-microcopy{right:2%;top:10%}
+  .hero-edge-blueprint-left{width:42%;height:44%;bottom:30%}
+  .hero-edge-blueprint-right{width:44%;height:42%}
+  .hero-left-microcopy{display:none}
+  .hero-bottom-strip{margin-top:0}
+}
+@media(max-width:720px){
+  .hero{padding:34px 0 24px}
+  .hero-grid{gap:18px}
+  .hero-copy .hero-name{font-size:48px}
+  .hero-role{font-size:25px;margin-top:10px}
+  .hero-specialties{font-size:12px;margin-bottom:18px}
+  .hero-status-line{display:grid;gap:9px;margin-bottom:18px}
+  .hero-status-line span+span{margin-left:0;padding-left:0;border-left:0}
+  .hero-status-line .available{margin-top:0}
+  .hero-copy .hero-lead{font-size:15px}
+  .hero-actions{display:grid;grid-template-columns:1fr 1fr}
+  .hero-actions .btn{min-width:0;width:100%}
+  .hero-visual{min-height:460px}
+  .profile-frame{width:88%;border-radius:28px}
+  .profile-frame img{height:435px}
+  .hero-blueprint{inset:9% 5% 7% 11%;transform:translate(16px,-2px)}
+  .hero-blueprint::before{inset:10px -18px -8px 24px}
+  .hero-blueprint::after{right:-24px;width:44px}
+  .hero-signature{right:0!important;bottom:4%!important;padding:9px 13px!important}
+  .hero-signature span{font-size:25px}
+  .hero-microcopy,.hero-edge-blueprint,.hero-bottom-strip{display:none}
+}
+@media(max-width:480px){
+  .hero-copy .hero-name{font-size:42px}
+  .hero-role{font-size:23px}
+  .hero-actions{grid-template-columns:1fr}
+  .hero-visual{min-height:425px}
+  .profile-frame img{height:400px}
+}
