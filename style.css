@@ -79,7 +79,7 @@
 
 /* V4 hero identity alignment */
 .hero-copy .hero-name{font-size:clamp(54px,5.35vw,82px);line-height:.96;letter-spacing:-.045em;margin:0;color:var(--navy);font-weight:900;text-transform:uppercase}
-.hero-role{font-size:clamp(28px,2.6vw,43px);line-height:1.08;margin:10px 0 18px;color:var(--blue);font-weight:850;letter-spacing:-.025em}
+.hero-role{font-size:clamp(28px,2.6vw,43px);line-height:1.08;margin:10px 0 18px;color:#111111;font-weight:850;letter-spacing:-.025em}
 .hero-location{display:inline-flex;align-items:center;gap:10px;color:var(--navy);font-size:16px;font-weight:700;margin-bottom:18px}.hero-location i{color:var(--blue)}
 .hero-facts-primary{margin:14px 0 24px;gap:14px 24px;font-size:14px}.hero-facts-primary span{position:relative}.hero-facts-primary span+span::before{content:"";width:1px;height:20px;background:#bdcbd9;margin-right:16px}.hero-facts-primary .available i{font-size:8px}
 .hero-copy .hero-lead{margin:24px 0 22px;max-width:720px;line-height:1.65}
@@ -169,4 +169,17 @@ a:focus-visible,button:focus-visible,[role="tab"]:focus-visible{outline:3px soli
   .credential-actions .text-link{margin-top:4px}
   .contact-list>a,.contact-location{grid-template-columns:40px minmax(0,1fr) auto}
   .contact-list strong{overflow-wrap:anywhere}
+}
+
+/* V12 — requested final adjustments: black hero job title + undistorted document previews */
+.certificate-dialog{width:min(760px,100%)}
+.certificate-viewer{display:flex;justify-content:center;align-items:flex-start;overflow:auto;background:#e9eff5;padding:18px;max-height:72vh}
+.certificate-viewer img{display:block;width:auto!important;height:auto!important;max-width:min(100%,620px)!important;max-height:none!important;object-fit:contain!important;aspect-ratio:auto!important;margin:0 auto;flex:0 0 auto;box-shadow:0 15px 45px rgba(17,44,80,.15);user-select:none}
+.cv-dialog{width:min(920px,100%)}
+.cv-viewer{display:flex;justify-content:center;align-items:flex-start;overflow:auto;background:#eef3f8;padding:22px;max-height:72vh}
+.cv-viewer img{display:block;width:auto!important;height:auto!important;max-width:min(100%,760px)!important;max-height:none!important;object-fit:contain!important;aspect-ratio:auto!important;margin:0 auto;flex:0 0 auto;box-shadow:0 12px 36px rgba(17,44,80,.18)}
+@media(max-width:600px){
+  .certificate-dialog,.cv-dialog{width:100%}
+  .certificate-viewer,.cv-viewer{padding:10px;max-height:68vh}
+  .certificate-viewer img,.cv-viewer img{max-width:100%!important}
 }
