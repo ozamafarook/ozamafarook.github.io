@@ -183,3 +183,133 @@ a:focus-visible,button:focus-visible,[role="tab"]:focus-visible{outline:3px soli
   .certificate-viewer,.cv-viewer{padding:10px;max-height:68vh}
   .certificate-viewer img,.cv-viewer img{max-width:100%!important}
 }
+
+/* V15 — recruiter-focused technical hero + refreshed OF brand */
+.brand{
+  padding:0;
+  background:transparent;
+  box-shadow:none;
+  border-radius:18px;
+}
+.brand-logo{
+  width:214px;
+  height:auto;
+  object-fit:contain;
+  object-position:left center;
+  filter:drop-shadow(0 7px 15px rgba(11,31,58,.12));
+  display:block;
+}
+.footer-brand img{
+  width:225px;
+  height:auto;
+  filter:none;
+  opacity:1;
+}
+
+.hero-grid{gap:62px}
+.hero-professional-label{margin-bottom:18px;font-size:11px;letter-spacing:.19em}
+.hero-role{margin:9px 0 16px}
+.hero-status-line{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px 0;
+  margin:0 0 15px;
+  color:#536b82;
+  font-size:13px;
+  font-weight:700;
+}
+.hero-status-line span{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.hero-status-line span+span{margin-left:16px;padding-left:16px;border-left:1px solid #bdcbd9}
+.hero-status-line i{color:var(--blue)}
+.hero-status-line .available i{font-size:8px;color:#24a866}
+.hero-specialties{
+  margin:0 0 17px;
+  color:#315f8e;
+  font-size:13px;
+  line-height:1.5;
+  font-weight:850;
+  letter-spacing:.018em;
+}
+.hero-specialties b{color:#8ca5bd;font-weight:700;padding:0 5px}
+.hero-copy .hero-lead{
+  margin:0 0 22px;
+  max-width:650px;
+  font-size:16px;
+  line-height:1.65;
+}
+.hero-actions{margin-top:2px}
+
+.hero-technical-layer{
+  position:absolute;
+  inset:6% -2% 4% 11%;
+  z-index:1;
+  pointer-events:none;
+  opacity:.28;
+  background:
+    linear-gradient(90deg,transparent 0 13%,rgba(21,118,212,.12) 13% 13.25%,transparent 13.25% 71%,rgba(21,118,212,.09) 71% 71.25%,transparent 71.25%),
+    linear-gradient(0deg,transparent 0 23%,rgba(21,118,212,.1) 23% 23.25%,transparent 23.25% 74%,rgba(21,118,212,.08) 74% 74.25%,transparent 74.25%);
+}
+.hero-technical-layer::before{
+  content:"";
+  position:absolute;
+  right:1%;
+  top:8%;
+  width:42%;
+  height:28%;
+  border-top:1px solid rgba(21,118,212,.44);
+  border-right:1px solid rgba(21,118,212,.44);
+  border-radius:0 18px 0 0;
+}
+.hero-technical-layer::after{
+  content:"";
+  position:absolute;
+  right:7%;
+  bottom:5%;
+  width:36%;
+  height:26%;
+  border-right:1px solid rgba(21,118,212,.35);
+  border-bottom:1px solid rgba(21,118,212,.35);
+  border-radius:0 0 18px 0;
+}
+.hero-technical-layer .tech-camera,
+.hero-technical-layer .tech-rack{
+  position:absolute;
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(21,118,212,.42);
+  border-radius:11px;
+  color:#1576d4;
+  background:rgba(238,247,255,.72);
+  box-shadow:0 0 0 5px rgba(21,118,212,.035);
+}
+.hero-technical-layer .tech-camera{right:2%;top:17%}
+.hero-technical-layer .tech-rack{right:9%;bottom:10%}
+.hero-technical-layer .tech-route{position:absolute;display:block;border-color:rgba(21,118,212,.4);border-style:solid}
+.hero-technical-layer .tech-route-a{right:8%;top:27%;width:34%;height:27%;border-width:1px 1px 0 0}
+.hero-technical-layer .tech-route-b{right:17%;bottom:23%;width:28%;height:19%;border-width:0 1px 1px 0}
+.hero-technical-layer .tech-node{position:absolute;width:7px;height:7px;border-radius:50%;background:#1576d4;box-shadow:0 0 0 4px rgba(21,118,212,.09)}
+.hero-technical-layer .tech-node-a{right:42%;top:27%}
+.hero-technical-layer .tech-node-b{right:8%;top:53%}
+.hero-technical-layer .tech-node-c{right:45%;bottom:23%}
+
+@media(max-width:980px){
+  .brand-logo{width:190px}
+  .hero-grid{gap:38px}
+  .hero-status-line span+span{margin-left:12px;padding-left:12px}
+  .hero-technical-layer{opacity:.2;inset:7% 0 5% 10%}
+}
+@media(max-width:720px){
+  .brand-logo{width:176px}
+  .footer-brand img{width:205px}
+  .hero-professional-label{font-size:10px;letter-spacing:.16em}
+  .hero-status-line{display:grid;gap:9px;margin-bottom:13px}
+  .hero-status-line span+span{margin-left:0;padding-left:0;border-left:0}
+  .hero-specialties{font-size:12px;line-height:1.65}
+  .hero-specialties b{padding:0 3px}
+  .hero-copy .hero-lead{font-size:15px}
+  .hero-technical-layer{opacity:.12}
+  .hero-technical-layer .tech-camera,.hero-technical-layer .tech-rack{display:none}
+}
