@@ -2519,3 +2519,201 @@ textarea {
     }
 
 }
+
+/* =========================================================
+   2026 STREETWEAR + RETRO EDITORIAL REFRESH
+   ========================================================= */
+:root{--bg:#0b0b0b;--bg-soft:#121212;--bg-card:#171717;--white:#f4efe5;--text:#eee7dc;--muted:#a59e94;--accent:#8f1822;--accent-dark:#641016;--cream:#e8dfcf;--ink:#111111;--border:rgba(244,239,229,.12)}
+body{background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 5px)}
+.announcement-bar{background:var(--accent);color:#fff;letter-spacing:1.8px}
+.shop-header{background:rgba(11,11,11,.94);border-bottom:1px solid rgba(244,239,229,.12)}
+.brand-number{background:var(--cream);color:var(--ink);border-radius:0;box-shadow:4px 4px 0 var(--accent)}
+.brand-text strong{letter-spacing:.08em}.brand-text small{color:#9e968d;letter-spacing:.2em}
+.shop-nav a{color:#c8c0b6;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.shop-nav a:hover{color:#fff}
+.header-icon,.menu-button{border-radius:0;border-color:rgba(244,239,229,.15)}.cart-count{background:var(--accent);color:#fff}
+.hero{position:relative;min-height:690px;background:#101010;overflow:hidden;border-bottom:1px solid rgba(244,239,229,.1)}
+.hero::before{content:"11";position:absolute;right:-35px;bottom:-120px;font-size:min(38vw,560px);font-weight:950;line-height:1;letter-spacing:-.12em;color:rgba(244,239,229,.028);pointer-events:none}
+.hero::after{content:"";position:absolute;top:0;right:0;width:38%;height:100%;background:linear-gradient(145deg,rgba(143,24,34,.5),rgba(143,24,34,.08) 55%,transparent 56%);clip-path:polygon(30% 0,100% 0,100% 100%,0 100%);pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:800px}.eyebrow{color:#b8aea2;letter-spacing:.24em;font-size:10px}.eyebrow::before{background:var(--accent)}
+.hero h1{display:flex;flex-direction:column;align-items:flex-start;margin:.18em 0 .28em;font-size:clamp(60px,8.3vw,128px);line-height:.78;letter-spacing:-.07em;color:var(--cream);font-weight:950;text-transform:uppercase}.hero h1 .hero-eleven{font-size:.72em;color:#fff;text-shadow:5px 5px 0 var(--accent)}.hero h1 .hero-culture{margin-top:18px;font-size:.13em;line-height:1;letter-spacing:.36em;color:#b58e75;text-shadow:none}
+.hero-description.hero-manifesto{max-width:690px;font-size:20px;line-height:1.55;color:#d3cbc0}.hero-description.hero-manifesto strong{color:#fff}.hero-description.hero-manifesto span{display:block;margin-top:15px;font-size:10px;letter-spacing:.2em;font-weight:900;text-transform:uppercase;color:#9c948a}
+.primary-button{border-radius:0;background:var(--cream);color:var(--ink);box-shadow:5px 5px 0 var(--accent);letter-spacing:.11em}.primary-button:hover{background:#fff;transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--accent)}.secondary-button{border-radius:0;border-color:rgba(244,239,229,.28);color:var(--cream);letter-spacing:.11em}.secondary-button:hover{background:rgba(244,239,229,.05);border-color:var(--cream)}
+.hero-stats>div{border-left-color:rgba(244,239,229,.16)}.hero-stats strong{color:var(--cream);letter-spacing:.08em}.hero-stats span{color:#8f8981}
+.hero-visual{position:relative;z-index:2}.hero-badge{background:var(--cream);color:var(--ink);border-radius:0;box-shadow:10px 12px 0 var(--accent);transform:rotate(2deg)}.hero-badge span{color:var(--ink)}.hero-badge small{color:#463d38}
+.jersey-shirt{background:linear-gradient(145deg,#eee4d3,#cfc1ad);filter:drop-shadow(0 30px 20px rgba(0,0,0,.35))}.jersey-shirt::after{content:"";position:absolute;left:0;right:0;top:42%;height:34px;background:var(--accent);opacity:.95}.shirt-logo,.shirt-number{position:relative;z-index:2;color:#111}.shirt-logo{background:#111;color:var(--cream);border-radius:0}.shirt-number{text-shadow:none}
+.category-strip{background:#e7ddcb;color:#111;border-top:6px solid var(--accent);border-bottom:1px solid #c8bba8}.category-strip a{border-color:#c9bdab}.category-strip a:hover{background:#f3ecdf;transform:translateY(-3px)}.category-strip i{color:var(--accent)}.category-strip strong{letter-spacing:.08em}.category-strip span{color:#615a52}
+.products-section{background:#0d0d0d}.section-header .eyebrow{color:#9e958a}.section-header h2{font-size:clamp(38px,5vw,68px);letter-spacing:-.055em;color:var(--cream);text-transform:uppercase}.section-header p{color:#9e958a}
+.product-card{background:#141414;border:1px solid rgba(244,239,229,.1);border-radius:0}.product-card:hover{border-color:rgba(232,223,207,.3);transform:translateY(-6px)}.product-image{background:linear-gradient(145deg,#1a1a1a,#101010)}.product-badge{border-radius:0;background:var(--accent);color:#fff;letter-spacing:.08em}.product-info h3{color:#f3ecdf}.product-info p{color:#918b83}.product-price{color:#f4efe5}.add-to-cart{border-radius:0;background:#e7ddcb;color:#111}.add-to-cart:hover{background:#fff}.add-to-cart i{color:var(--accent)}
+.collection-banner,.retro-section,.about-section{background:#e7ddcb;color:#111}.collection-banner::before,.retro-section::before{background:rgba(143,24,34,.08)}.collection-banner .eyebrow,.retro-section .eyebrow,.about-section .eyebrow{color:#6f645b}.collection-banner h2,.retro-section h2,.about-section h2{color:#111;letter-spacing:-.05em;text-transform:uppercase}.collection-banner p,.retro-section p,.about-section p{color:#5e564f}.collection-banner .secondary-button,.retro-section .secondary-button{border-color:#111;color:#111}.collection-banner .secondary-button:hover,.retro-section .secondary-button:hover{background:#111;color:#f1e8d9}
+.trust-section{background:#111}.trust-section>div{border-radius:0;border-color:rgba(244,239,229,.11)}.trust-section i{color:#b98b74}.trust-section strong{color:#f0e9de}.trust-section span{color:#8e8780}.about-mark{background:#111;color:var(--cream);border-radius:0;box-shadow:12px 12px 0 var(--accent)}
+.shop-footer{background:#080808;border-top:8px solid var(--accent)}.footer-column h4{color:#b98b74;letter-spacing:.15em}.footer-column a,.footer-brand p{color:#9a938a}.footer-column a:hover{color:#fff}
+.cart-drawer,.checkout-modal{background:#111;color:#f3ecdf;border-color:rgba(244,239,229,.12)}.checkout-field input,.checkout-field textarea{background:#171717;color:#fff;border-color:rgba(244,239,229,.13);border-radius:0}.checkout-field input:focus,.checkout-field textarea:focus{border-color:#a62b35}.checkout-submit{background:var(--cream);color:#111;border-radius:0;box-shadow:4px 4px 0 var(--accent)}
+@media(max-width:900px){.hero{min-height:auto}.hero::after{width:55%;opacity:.5}.hero h1{font-size:clamp(56px,15vw,94px)}.hero h1 .hero-culture{font-size:.14em;letter-spacing:.24em}.hero-description.hero-manifesto{font-size:17px}}
+@media(max-width:640px){.hero::after{display:none}.hero h1{font-size:clamp(50px,18vw,74px)}.hero h1 .hero-culture{font-size:.15em;letter-spacing:.18em}.hero-description.hero-manifesto{font-size:16px}.hero-buttons{align-items:stretch}.primary-button,.secondary-button{justify-content:center}}
+
+/* =========================================================
+   V8 HERO LAYOUT FIX — balanced desktop + responsive
+   ========================================================= */
+.hero{
+    max-width:1500px;
+    min-height:650px;
+    padding:72px var(--page-padding) 66px;
+    grid-template-columns:minmax(0,1.08fr) minmax(390px,.92fr);
+    gap:56px;
+    align-items:center;
+    background:
+      radial-gradient(circle at 82% 42%, rgba(143,24,34,.13), transparent 31%),
+      linear-gradient(120deg,#101010 0%,#101010 62%,#0d0d0d 100%);
+}
+.hero::before{
+    content:"11";
+    right:-15px;
+    bottom:-135px;
+    font-size:min(34vw,500px);
+    color:rgba(244,239,229,.022);
+}
+.hero::after{
+    top:0;
+    right:0;
+    width:35%;
+    height:100%;
+    opacity:.8;
+    background:linear-gradient(145deg,rgba(143,24,34,.42),rgba(143,24,34,.05) 58%,transparent 59%);
+}
+.hero-content{max-width:760px;padding:12px 0 6px}
+.eyebrow{margin-bottom:20px}
+.hero h1{
+    display:block;
+    max-width:760px;
+    margin:0 0 22px;
+    font-size:clamp(70px,6.4vw,104px);
+    line-height:.86;
+    letter-spacing:-.065em;
+}
+.hero h1 .hero-eleven{
+    display:block;
+    width:max-content;
+    margin:0 0 8px 4px;
+    font-size:.58em;
+    line-height:.82;
+    letter-spacing:-.05em;
+}
+.hero h1 .hero-culture{
+    display:block;
+    margin-top:16px;
+    font-size:.14em;
+    line-height:1.1;
+    letter-spacing:.31em;
+    color:#b58e75;
+}
+.hero-description.hero-manifesto{
+    max-width:620px;
+    margin-bottom:26px;
+    font-size:18px;
+    line-height:1.55;
+}
+.hero-description.hero-manifesto span{margin-top:13px;line-height:1.5}
+.hero-buttons{margin-bottom:28px}
+.hero-stats{gap:28px}
+.hero-stats>div{min-width:74px;padding-left:0;border-left:0}
+
+.hero-visual{
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    border:1px solid rgba(244,239,229,.10);
+    background:
+      linear-gradient(145deg,rgba(244,239,229,.035),rgba(255,255,255,.008)),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 56px),
+      repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 56px);
+    box-shadow:0 28px 70px rgba(0,0,0,.24);
+}
+.hero-badge{
+    top:auto;
+    right:22px;
+    bottom:24px;
+    min-width:150px;
+    padding:13px 16px 11px;
+    transform:rotate(1.5deg);
+    box-shadow:7px 8px 0 var(--accent);
+}
+.hero-badge span{font-size:38px;line-height:.9}
+.hero-badge strong{font-size:13px;letter-spacing:2.3px}
+.hero-badge small{margin-top:3px;font-size:7px;letter-spacing:1.5px}
+.jersey-display{width:330px;transform:translateY(-5px)}
+.jersey-neck{width:82px;height:34px;margin-bottom:-13px}
+.jersey-shirt{min-height:395px;padding-top:70px}
+.shirt-number{font-size:126px;line-height:1}
+.shirt-logo{top:58px}
+
+.category-strip{position:relative;z-index:3;margin-top:0}
+
+@media(max-width:1100px){
+  .hero{grid-template-columns:minmax(0,1fr) minmax(330px,.78fr);gap:36px;padding-top:62px}
+  .hero h1{font-size:clamp(62px,7vw,88px)}
+  .hero-visual{min-height:450px;padding:24px}
+  .jersey-display{width:290px}.jersey-shirt{min-height:350px}.shirt-number{font-size:112px}
+}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:58px;gap:34px}
+  .hero-content{max-width:760px}
+  .hero h1{font-size:clamp(62px,12vw,92px)}
+  .hero-visual{width:100%;max-width:620px;min-height:430px;margin:0 auto}
+}
+@media(max-width:640px){
+  .hero{padding:44px var(--page-padding) 48px;gap:28px}
+  .hero h1{font-size:clamp(52px,17vw,72px);letter-spacing:-.055em}
+  .hero h1 .hero-eleven{font-size:.54em}.hero h1 .hero-culture{font-size:.145em;letter-spacing:.19em;margin-top:13px}
+  .hero-description.hero-manifesto{font-size:16px}
+  .hero-visual{min-height:370px;padding:18px}
+  .jersey-display{width:240px}.jersey-shirt{min-height:300px}.shirt-number{font-size:92px}
+  .hero-badge{right:13px;bottom:14px;min-width:120px;padding:10px 12px}.hero-badge span{font-size:30px}.hero-badge strong{font-size:10px}
+}
+
+
+/* =========================================================
+   V9 HERO VISUAL COLOR FIX — premium burgundy jersey
+   ========================================================= */
+.hero-visual{
+    background:
+      radial-gradient(circle at 72% 28%, rgba(143,24,34,.16), transparent 34%),
+      linear-gradient(145deg,rgba(244,239,229,.03),rgba(255,255,255,.006)),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.016) 0 1px,transparent 1px 56px),
+      repeating-linear-gradient(0deg,rgba(255,255,255,.016) 0 1px,transparent 1px 56px);
+}
+.jersey-neck{
+    background:#171717;
+    border-color:#3b3130;
+    box-shadow:0 0 0 5px rgba(232,223,207,.035);
+}
+.jersey-shirt{
+    background:
+      linear-gradient(90deg,transparent 0 22%,rgba(255,255,255,.025) 22% 23%,transparent 23% 77%,rgba(255,255,255,.025) 77% 78%,transparent 78%),
+      linear-gradient(145deg,#8f1822 0%,#76141c 46%,#531016 100%);
+    border:1px solid rgba(244,239,229,.10);
+    filter:drop-shadow(0 30px 24px rgba(0,0,0,.38));
+}
+.jersey-shirt::after{
+    top:43%;
+    height:30px;
+    background:#151515;
+    opacity:.96;
+}
+.shirt-logo{
+    background:var(--cream);
+    color:#111;
+    padding:5px 7px;
+    font-size:13px;
+    letter-spacing:.04em;
+}
+.shirt-number{
+    color:var(--cream);
+    text-shadow:0 3px 0 rgba(0,0,0,.18);
+}
+.hero-badge{
+    background:var(--cream);
+    color:var(--ink);
+    border:1px solid rgba(17,17,17,.08);
+}
