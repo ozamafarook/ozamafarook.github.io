@@ -48,7 +48,15 @@ function updateScrollUI() {
   });
 }
 
-addEventListener('scroll', updateScrollUI, { passive: true });
+let scrollUpdateQueued = false;
+addEventListener('scroll', () => {
+  if (scrollUpdateQueued) return;
+  scrollUpdateQueued = true;
+  requestAnimationFrame(() => {
+    updateScrollUI();
+    scrollUpdateQueued = false;
+  });
+}, { passive: true });
 addEventListener('load', updateScrollUI);
 backToTop?.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
 
@@ -72,6 +80,11 @@ const modalState = { lastFocus: null };
 function openModal(id) {
   const modal = document.getElementById(id);
   if (!modal) return;
+
+  // V19: hidden CV/certificate/PDF/drawing media is not downloaded on initial page load.
+  $$('[data-modal-src]', modal).forEach(media => {
+    if (!media.getAttribute('src')) media.setAttribute('src', media.dataset.modalSrc);
+  });
 
   modalState.lastFocus = document.activeElement;
   modal.classList.add('open');

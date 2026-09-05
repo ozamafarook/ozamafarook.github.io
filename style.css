@@ -604,3 +604,7 @@ a:focus-visible,button:focus-visible,[role="tab"]:focus-visible{outline:3px soli
   .hero-visual{min-height:425px}
   .profile-frame img{height:400px}
 }
+
+/* V19 performance stability */
+i[class^="fa-"],i[class*=" fa-"]{display:inline-block;min-width:1em;text-align:center}
+@supports (content-visibility:auto){main>section:not(.hero):not(.highlights-section){content-visibility:auto;contain-intrinsic-size:800px}}
