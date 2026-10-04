@@ -8,6 +8,7 @@
 /* ================= WHATSAPP ================= */
 
 const whatsappNumber = "94752334766";
+const checkoutApiUrl = "https://customer-orders-dashboard-4iwhop.camelai.app/api/orders";
 
 
 /* ================= MAIN ELEMENTS ================= */
@@ -996,213 +997,86 @@ function validateCheckoutForm() {
 
 
 /* =========================================================
-   SEND COMPLETE ORDER TO WHATSAPP
+   SAVE ORDER TO DASHBOARD, THEN OPEN WHATSAPP
    ========================================================= */
 
 if (checkoutForm) {
-
-    checkoutForm.addEventListener(
-        "submit",
-        function (event) {
-
-            event.preventDefault();
-
-
-            if (cart.length === 0) {
-
-                alert(
-                    "Your shopping cart is empty."
-                );
-
-                closeCheckoutModal();
-
-                return;
-
-            }
-
-
-            if (!validateCheckoutForm()) {
-
-                const firstInvalid =
-                    checkoutForm.querySelector(
-                        ".invalid"
-                    );
-
-
-                if (firstInvalid) {
-
-                    firstInvalid.focus();
-
-                }
-
-
-                return;
-
-            }
-
-
-            const name =
-                customerName.value.trim();
-
-
-            const phone =
-                customerPhone.value.trim();
-
-
-            const city =
-                customerCity.value.trim();
-
-
-            const address =
-                customerAddress.value.trim();
-
-
-            const note =
-                customerNote
-                    ? customerNote.value.trim()
-                    : "";
-
-
-            let orderMessage = "";
-
-
-            /* HEADER */
-
-            orderMessage +=
-                "*11 HARAMIES ORDER*\n\n";
-
-
-            /* CUSTOMER */
-
-            orderMessage +=
-                "*CUSTOMER DETAILS*\n";
-
-
-            orderMessage +=
-                "Name: " +
-                name +
-                "\n";
-
-
-            orderMessage +=
-                "Phone: " +
-                phone +
-                "\n";
-
-
-            orderMessage +=
-                "City: " +
-                city +
-                "\n";
-
-
-            orderMessage +=
-                "Address: " +
-                address +
-                "\n";
-
-
-            if (note !== "") {
-
-                orderMessage +=
-                    "Order Note: " +
-                    note +
-                    "\n";
-
-            }
-
-
-            orderMessage += "\n";
-
-
-            /* ORDER */
-
-            orderMessage +=
-                "*ORDER DETAILS*\n\n";
-
-
-            cart.forEach(
-                function (item, index) {
-
-                    const itemTotal =
-                        item.price *
-                        item.quantity;
-
-
-                    orderMessage +=
-                        "*" +
-                        (index + 1) +
-                        ". " +
-                        item.name +
-                        "*\n";
-
-
-                    orderMessage +=
-                        "Size: " +
-                        item.size +
-                        "\n";
-
-
-                    orderMessage +=
-                        "Quantity: " +
-                        item.quantity +
-                        "\n";
-
-
-                    orderMessage +=
-                        "Price: LKR " +
-                        item.price.toLocaleString() +
-                        "\n";
-
-
-                    orderMessage +=
-                        "Subtotal: LKR " +
-                        itemTotal.toLocaleString() +
-                        "\n\n";
-
-                }
-            );
-
-
-            const total =
-                calculateCartTotal();
-
-
-            orderMessage +=
-                "------------------------------\n";
-
-
-            orderMessage +=
-                "*TOTAL: LKR " +
-                total.toLocaleString() +
-                "*\n\n";
-
-
-            orderMessage +=
-                "Please confirm availability and delivery details.\n";
-
-
-            orderMessage +=
-                "Thank you!";
-
-
-            const whatsappURL =
-                "https://wa.me/" +
-                whatsappNumber +
-                "?text=" +
-                encodeURIComponent(
-                    orderMessage
-                );
-
-
-            window.open(
-                whatsappURL,
-                "_blank"
-            );
-
+    checkoutForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        if (cart.length === 0) { alert("Your shopping cart is empty."); closeCheckoutModal(); return; }
+        if (!validateCheckoutForm()) {
+            const firstInvalid = checkoutForm.querySelector(".invalid");
+            if (firstInvalid) firstInvalid.focus();
+            return;
         }
-    );
+        const name = customerName.value.trim();
+        const phone = customerPhone.value.trim();
+        const city = customerCity.value.trim();
+        const address = customerAddress.value.trim();
+        const note = customerNote ? customerNote.value.trim() : "";
+        const total = calculateCartTotal();
+        const requestId = window.crypto && typeof window.crypto.randomUUID === "function"
+            ? window.crypto.randomUUID()
+            : "11h-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2);
+        const whatsappTab = window.open("about:blank", "_blank");
+        if (whatsappTab) whatsappTab.opener = null;
+        const submitButton = checkoutForm.querySelector(".place-order-button");
+        const originalButtonHtml = submitButton ? submitButton.innerHTML : "";
+        if (submitButton) { submitButton.disabled = true; submitButton.textContent = "SAVING ORDER..."; }
 
+        let orderMessage = "*11 HARAMIES ORDER*\n\n";
+        orderMessage += "*CUSTOMER DETAILS*\n";
+        orderMessage += "Name: " + name + "\n";
+        orderMessage += "Phone: " + phone + "\n";
+        orderMessage += "City: " + city + "\n";
+        orderMessage += "Address: " + address + "\n";
+        if (note !== "") orderMessage += "Order Note: " + note + "\n";
+        orderMessage += "\n*ORDER DETAILS*\n\n";
+        cart.forEach(function (item, index) {
+            const itemTotal = item.price * item.quantity;
+            orderMessage += "*" + (index + 1) + ". " + item.name + "*\n";
+            orderMessage += "Size: " + item.size + "\n";
+            orderMessage += "Quantity: " + item.quantity + "\n";
+            orderMessage += "Price: LKR " + item.price.toLocaleString() + "\n";
+            orderMessage += "Subtotal: LKR " + itemTotal.toLocaleString() + "\n\n";
+        });
+        orderMessage += "------------------------------\n";
+        orderMessage += "*TOTAL: LKR " + total.toLocaleString() + "*\n\n";
+        orderMessage += "Please confirm availability and delivery details.\nThank you!";
+
+        try {
+            const response = await fetch(checkoutApiUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    requestId: requestId,
+                    customer: { name: name, phone: phone, city: city, address: address, note: note },
+                    items: cart.map(function (item) { return { name: item.name, price: item.price, size: item.size, quantity: item.quantity }; }),
+                    total: total
+                })
+            });
+            const result = await response.json();
+            if (!response.ok || !result || !result.ok || !result.orderNumber) throw new Error(result && result.error ? result.error : "Order could not be saved.");
+            orderMessage += "\n\n*DASHBOARD REF: " + result.orderNumber + "*";
+            orderMessage += "\nPlease mention this reference if you contact us.";
+            const whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(orderMessage);
+            if (whatsappTab) whatsappTab.location.replace(whatsappURL);
+            else window.location.assign(whatsappURL);
+        } catch (error) {
+            console.error("Store order sync failed:", error);
+            orderMessage += "\n\n*Dashboard sync failed. Please record this order manually.*";
+            const fallbackURL = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(orderMessage);
+            if (whatsappTab) {
+                whatsappTab.location.replace(fallbackURL);
+                alert("We could not sync this order to the order desk. Your WhatsApp message is open; please send it as usual.");
+            } else {
+                alert("We could not sync this order to the order desk. WhatsApp will open so you can still send the order.");
+                window.location.assign(fallbackURL);
+            }
+        } finally {
+            if (submitButton) { submitButton.disabled = false; submitButton.innerHTML = originalButtonHtml; }
+        }
+    });
 }
 
 
